@@ -1,0 +1,25 @@
+# Invoke with: syscall-hids --config config.example.yaml <subcommand>
+# CLI values override the YAML. A monitor window must match the stored
+# calibration unless --threshold is passed explicitly.
+order: 1
+alpha: 0.01
+window: 20
+percentile: 99
+max_streams: 4096
+critical_probability: 0.001
+critical_pair_span: 4
+# Remove a key to use the default catalog. [] disables standalone checks.
+critical_tokens:
+  - execve
+  - execveat
+  - ptrace
+  - init_module
+  - finit_module
+  - delete_module
+  - mprotect:EXEC
+  - pkey_mprotect:EXEC
+  - mmap:EXEC
+  - setuid
+  - setreuid
+  - setresuid
+  - capset
