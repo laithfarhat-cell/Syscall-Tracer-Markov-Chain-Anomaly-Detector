@@ -1,0 +1,27 @@
+# Local environments and Python/tool caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Packaging and local analysis artifacts (may contain sensitive telemetry)
+*.egg-info/
+build/
+dist/
+artifacts/
+profile.json
+syscall_alerts.json
+syscall_alerts.jsonl
+markov_heatmap.png
+anomaly_timeline.png
+markov_graph.dot
+
+# Editors
+.DS_Store
+.idea/
+.vscode/
